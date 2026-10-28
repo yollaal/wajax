@@ -1,0 +1,13 @@
+{
+    "name": "wajax/wajax",
+    "description": "PHP and JavaScript based AJAX library for direct DOM manipulation from PHP.",
+    "type": "library",
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "autoload": {
+        "classmap": [
+            "lib/wajax/wajax.php"
+        ]
+    }
+}
