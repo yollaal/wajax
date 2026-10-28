@@ -63,13 +63,12 @@ Add `w-form` to your form, and `w-click="module/action"` to your button. Wajax w
 
     <div id="resultBox"></div>
 
-    <!-- 3. Include jQuery and Wajax JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 3. Include Wajax JS (No jQuery required!) -->
     <script src="lib/wajax/wajax.js"></script>
 
     <!-- 4. Initialize Wajax -->
     <script type="text/javascript">
-        $(document).ready(function () {
+        document.addEventListener('DOMContentLoaded', function () {
             // Point ajax.run to your central AJAX handler PHP file.
             ajax.run('api/ajax.php', 'ajaxStartEvent', 'ajaxFinalEvent');
         });

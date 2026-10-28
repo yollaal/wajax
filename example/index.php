@@ -41,12 +41,13 @@ define('SITE_ROOT_FOLDER',__DIR__."/");
     </form>
 </div>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"  ></script>
+<!-- Bootstrap 3 requires jQuery, but Wajax does not. Leaving jQuery here only for Bootstrap JS.
+     If Bootstrap JS is not needed, jQuery can be safely removed completely from the project. -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"  crossorigin="anonymous"></script>
-<script type="text/javascript" src="../lib/wajax/wajax.js"     ></script>
+
+<script type="text/javascript" src="../lib/wajax/wajax.js"></script>
 <script type="text/javascript">
-
-
 
     function ajaxStartEvent() {
 
@@ -56,14 +57,10 @@ define('SITE_ROOT_FOLDER',__DIR__."/");
 
     }
 
-
-    $(document).ready(function (e) {
-
+    document.addEventListener('DOMContentLoaded', function (e) {
         ajax.run('class/ajax.php', 'ajaxStartEvent', 'ajaxFinalEvent');
-
     });
 </script>
-
 
 </body>
 </html>
